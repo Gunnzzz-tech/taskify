@@ -1,6 +1,6 @@
 import { ChevronLeft } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-
+import taskifyImage from '/src/assets/taskifyblack.png';
 interface SidebarProps {
   workSchedule: string[];
   employmentType: string[];
@@ -18,14 +18,14 @@ export function Sidebar({
     <div className="w-[240px] flex-shrink-0">
       {/* Banner Card */}
       <div 
-        className="bg-gradient-to-br from-purple-900 to-blue-900 rounded-2xl p-5 mb-6 relative overflow-hidden h-[220px] flex flex-col justify-end"
-        style={{
-          backgroundImage: "url('/src/assets/taskifyblack.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
-        }}
-      >
+  className="rounded-2xl p-5 mb-6 relative overflow-hidden h-[220px] flex flex-col justify-end"
+  style={{
+    backgroundImage: `url(${taskifyImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }}
+>
         {/* Optional: Add a dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/30 z-0"></div>
         
